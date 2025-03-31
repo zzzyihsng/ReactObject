@@ -1,0 +1,126 @@
+/* theme.less */
+:root {
+  /* 颜色变量 */
+  --primary-color: #FF644D;
+  --secondary-color: #409eff;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --error-color: #f56c6c;
+  --background-color: #ffffff;
+  --text-color: #303133;
+  --border-color: #dcdcdc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* 字体变量 */
+  --font-family: 'Arial', sans-serif;
+  --font-size-base: 14px;
+  --font-size-large: 16px;
+  --font-size-small: 12px;
+
+  /* 间距变量 */
+  --spacing-base: 16px;
+  --spacing-large: 24px;
+  --spacing-small: 8px;
+
+  /* 边框变量 */
+  --border-radius-base: 4px;
+  --border-radius-large: 8px;
+  --border-radius-small: 2px;
+
+   /* 覆盖 TabBar 相关的 CSS 变量 */
+   --td-tab-bar-active-bg: #f5f5f5; /* 选中状态背景色 */
+   --td-tab-bar-active-color: #FF644D; /* 选中状态文字颜色 */
+   --td-tab-bar-bg-color: #ffffff; /* TabBar 背景色 */
+   --td-tab-bar-border-color: #dcdcdc; /* TabBar 边框颜色 */
+   --td-tab-bar-color: #333; /* 默认文字颜色 */
+   --td-tab-bar-height: 50px; /* TabBar 高度 */
+   --td-tab-bar-hover-bg-color: rgba(0, 0, 0, .08); /* 鼠标悬停背景色 */
+   --td-tab-bar-spread-border-color: #dcdcdc; /* 展开边框颜色 */
+   --td-tab-bar-spread-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 展开阴影 */
+   --td-tab-bar-border-color: #dcdcdc; /* TabBar 边框颜色 */
+   --td-tab-bar-round-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 圆角阴影 */
+}
+
+[data-theme="dark"] {
+  --primary-color: #909399;
+  --secondary-color: #409eff;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --error-color: #f56c6c;
+  --background-color: #1f1f1f;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 全局样式规则 */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--spacing-base);
+  color: var(--text-color);
+}
+
+p {
+  margin: 0 0 var(--spacing-base);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: var(--border-radius-base);
+  padding: var(--spacing-base) var(--spacing-large);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+}
+
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  padding: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+}
+
+.card-header {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-base);
+}
+
+.card-content {
+  margin-bottom: var(--spacing-base);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
